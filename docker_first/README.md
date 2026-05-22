@@ -99,6 +99,19 @@ That gives me a clean split:
 
 Add each secret to a separate `.txt` file inside the parent-level `secrets` folder, and add all non-secret environment variables to the parent-level `.env` file.
 
+Example secret in txt file:
+
+```text
+MY-PRIVATE-TEST_SECRET
+```
+
+Example .env file:
+
+```dotenv
+MY_ENV_VAR_1=THIS-IS-MY-ENV-VAR-1
+MY_ENV_VAR_2=THIS-IS-MY-ENV-VAR-2
+```
+
 Then I start the application from the repository root:
 
 ```bash
