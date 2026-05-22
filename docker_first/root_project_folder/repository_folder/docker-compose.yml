@@ -1,0 +1,19 @@
+services:
+  test-app: #UPDATE
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: test-app-container #UPDATE
+    env_file:
+      - ../.env
+    volumes:
+      - ./test_app:/app/test_app #UPDATE      
+    #ports:
+    #  - "7860:7860"
+    secrets:
+      - secret1 #UPDATE
+    restart: no
+
+secrets:
+  secret1:
+    file: ../secrets/secret1.txt #UPDATE
