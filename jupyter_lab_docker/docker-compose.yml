@@ -1,0 +1,11 @@
+services:
+  jupyter-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jupyter-lab-container
+    volumes:
+      - ./jupyter:/workspace
+    ports:
+      - "8888:8888"
+    restart: unless-stopped
